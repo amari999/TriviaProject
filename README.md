@@ -18,3 +18,10 @@ then
 **mvn spring-boot:run**
 
 *in case that it does not run, please open Main and try running it from there if you are using IntelIJ
+
+#Finally
+- Open a browser. Go to
+**http://localhost:8081/**
+- Enjoy the trivia!
+
+*In case there is already something running on port 8081, open application.properties and specify a preferred port
