@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trivia Question</title>
+    <link rel="stylesheet" th:href="@{/css/question.css}">
+</head>
+<body>
+<div class="prompt-container">
+    <div class="start-prompt finish-prompt">
+        <div class="finish">
+            <h1>THE END</h1>
+            <h2 th:text="'Your final score is ' + ${score} + '/' + ${total}"></h2>
+            <h2 th:text="'You played on difficulty: ' + ${difficulty}"></h2>
+            <h3>Would you like to play a new game?</h3>
+            <form th:action="@{/}" method="get">
+                <button class="submit-button" type="submit">Start New Game</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>

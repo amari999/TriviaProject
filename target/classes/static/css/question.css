@@ -1,0 +1,71 @@
+﻿body {
+    background-image: url('../images/background.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.prompt-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.prompt, .options, .score, .start-prompt{
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+}
+
+
+.card, .start-prompt {
+    background: deeppink;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 60vw;
+}
+
+.start-prompt{
+    height: 60vh;
+}
+
+.start-prompt.finish-prompt{
+    height: 40vh;
+}
+
+.card{
+    height: 70vh;
+}
+
+.option{
+    font-size: 25px;
+}
+
+.submit-button, .next-question{
+    background: deeppink;
+    font-size: 20px;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit-button:hover{
+    cursor: pointer;
+}
+
+.start-prompt form, .finish{
+    background: white;
+    border-radius: 10px;
+}
+
+.start-prompt label{
+    font-size: 20px;
+}
+

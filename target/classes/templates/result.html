@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trivia Result</title>
+    <link rel="stylesheet" th:href="@{/css/question.css}">
+</head>
+<body>
+<div class="prompt-container">
+    <div class="card">
+        <div class="prompt">
+            <h1 th:text="${isCorrect} ? 'Correct! Well Done.' : 'Wrong! Better luck next time.'"></h1>
+        </div>
+        <div class="options">
+            <h2 th:text="'The question was: ' + ${question}"></h2>
+            <h2 th:text="'Your answer: ' + ${chosenAnswer}"></h2>
+            <h2 th:text="'Correct answer: ' + ${correctAnswer}"></h2>
+            <form th:action="@{/trivia}" method="get">
+                <button class="submit-button" type="submit">Next Question</button>
+            </form>
+        </div>
+        <div class="score">
+            <h4 th:text="'Score: ' + ${score}"></h4>
+            <h4 th:text="'Question ' + ${currentIndex} + '/' + ${total}"></h4>
+        </div>
+    </div>
+</div>
+</body>

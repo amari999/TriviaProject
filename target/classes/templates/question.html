@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trivia Question</title>
+    <link rel="stylesheet" th:href="@{/css/question.css}">
+</head>
+<body>
+<div class="prompt-container">
+    <div class="card">
+        <div class="prompt">
+            <h1 th:text="${questionDto.question}"></h1>
+        </div>
+        <div class="options">
+            <h2>Choose one of the following answers:</h2>
+            <form th:action="@{/trivia/answer}" method="post">
+                <div th:each="answer : ${questionDto.allOptions}">
+                    <label class="option">
+                        <input type="radio" name="chosenAnswer" th:value="${answer}" required>
+                        <span th:text="${answer}"></span>
+                    </label>
+                    <br>
+                </div>
+                <br>
+                <button class="submit-button" type="submit">
+                    Check your answer
+                </button>
+                <br>
+            </form>
+        </div>
+        <div class="score">
+            <h4 th:text="'Score: ' + ${score}"></h4>
+            <h4 th:text="'Question ' + ${currentIndex + 1} + '/' + ${total}"></h4>
+            <h4 th:text="'Difficulty: ' + ${difficulty}"></h4>
+        </div>
+    </div>
+</div>
+
+</body>

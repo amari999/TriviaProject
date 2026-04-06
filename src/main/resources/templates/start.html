@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trivia Question</title>
+    <link rel="stylesheet" th:href="@{/css/question.css}">
+</head>
+<body>
+<div class="prompt-container">
+    <div class="start-prompt">
+        <h1>Welcome to Kenna Trivia!</h1>
+        <form th:action="@{/trivia/new}" method="post">
+            <h2>How many questions would you like to answer?</h2>
+            <label>
+                <input type="radio" name="amount" value="5" required>
+                5
+            </label><br>
+            <label>
+                <input type="radio" name="amount" value="10">
+                10
+            </label><br>
+            <label>
+                <input type="radio" name="amount" value="20">
+                20
+            </label><br>
+            <label>
+                <input type="radio" name="amount" value="30">
+                30
+            </label><br>
+            <h2>At what difficulty would you like to play?</h2>
+            <label>
+                <input type="radio" name="difficulty" value="easy" required>
+                Easy
+            </label><br>
+            <label>
+                <input type="radio" name="difficulty" value="medium">
+                Medium
+            </label><br>
+            <label>
+                <input type="radio" name="difficulty" value="hard">
+                Hard
+            </label><br>
+            <button class="submit-button" type="submit">Start Trivia</button>
+            <br>
+        </form>
+    </div>
+</div>
+</body>
+
+
