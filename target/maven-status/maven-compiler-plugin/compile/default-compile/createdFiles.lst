@@ -1,0 +1,10 @@
+org\example\models\TriviaMcQuestionDto.class
+org\example\services\interfaces\TriviaService.class
+org\example\controllers\HomeController.class
+org\example\models\TriviaApiModel.class
+org\example\Main.class
+org\example\controllers\TriviaController.class
+org\example\models\TriviaCard.class
+org\example\models\TriviaApiResponseModel.class
+org\example\client\TriviaApiClient.class
+org\example\services\TriviaServiceImpl.class
